@@ -35,15 +35,27 @@
 // }
 
 //==========================================home-task-3=======================================
-const ADMIN_PASSWORD = 'jqueryismyjam';
-let message = prompt('Введіть, будь ласка, пароль');
-if (message===null) {
-    message='Скасовано користувачем!';
+// const ADMIN_PASSWORD = 'jqueryismyjam';
+// let message = prompt('Введіть, будь ласка, пароль');
+// if (message===null) {
+//     message='Скасовано користувачем!';
+// }
+// else if (message===ADMIN_PASSWORD) {
+//     message='Ласкаво просимо!';
+// }
+// else{
+//     message='Доступ заборонений, невірний пароль!'
+// }
+// alert(message); 
+
+//========================================home-task-4========================================
+const credits=23580; //кошти клієнта
+const pricePerDroid=3000; //вартість одного дрона
+let quantityDroid=prompt('Вкажіть, будь ласка, яку кількість дроїдів Ви бажаєте придбати?');
+if (quantityDroid===null) {
+    console.log('Скасовано користувачем!');
+    
 }
-else if (message===ADMIN_PASSWORD) {
-    message='Ласкаво просимо!';
-}
-else{
-    message='Доступ заборонений, невірний пароль!'
-}
-alert(message); 
+
+
+
