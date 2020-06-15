@@ -35,30 +35,36 @@
 // }
 
 //==========================================home-task-3=======================================
-const ADMIN_PASSWORD = 'jqueryismyjam';
-let message = prompt('Введіть, будь ласка, пароль');
-let normalizeMessage = message.toLowerCase();
-if (message===null) {
-    message='Скасовано користувачем!';
-}
-else if (normalizeMessage===ADMIN_PASSWORD) {
-    message='Ласкаво просимо!';
-}
-else{
-    message='Доступ заборонений, невірний пароль!'
-}
-alert(message); 
+// const ADMIN_PASSWORD = 'jqueryismyjam';
+// let message = prompt('Введіть, будь ласка, пароль');
+// let normalizeMessage = message.toLowerCase();
+// if (message===null) {
+//     message='Скасовано користувачем!';
+// }
+// else if (normalizeMessage===ADMIN_PASSWORD) {
+//     message='Ласкаво просимо!';
+// }
+// else{
+//     message='Доступ заборонений, невірний пароль!'
+// }
+// alert(message); 
 
 //========================================home-task-4========================================
-// const credits=23580; //кошти клієнта
-// const pricePerDroid=3000; //вартість одного дрона
-// let quantityDroid=prompt('Вкажіть, будь ласка, яку кількість дроїдів Ви бажаєте придбати?');
-// if (quantityDroid===null) {
-//     console.log('Скасовано користувачем!');
-// }
-// else if (condition) {
-    
-// }
+const credits=23580; //кошти клієнта
+const pricePerDroid=3000; //вартість одного дрона
+let quantityDroid=prompt('Вкажіть, будь ласка, яку кількість дроїдів Ви бажаєте придбати?');
+quantityDroid = Number(quantityDroid);
+const totalPrice = quantityDroid * pricePerDroid; //вартість всього замовлення
+if (quantityDroid===null) {
+    console.log('Скасовано користувачем!');
+}else if(totalPrice<=credits){
+    const balanceCredits = credits - totalPrice;
+    console.log('Ви купили', quantityDroid, 'дроїдів, на Вашому рахунку залишилося', balanceCredits,'кредитів');
+}else {
+    console.log('На Вашому рахунку недостатньо коштів для купівлі',quantityDroid,'дроїдів');
+}
 
 
 
+// якщо сума до оплати перевищує кількість кредитів на рахунку, виводь в консоль повідомлення 'Недостатньо коштів на рахунку!'.
+// в іншому випадку необхідно порахувати залишок кредитів на рахунку і вивести повідомлення 'Ви купили [число] дроїдів, на рахунку залишилося [число] кредитів.'.
