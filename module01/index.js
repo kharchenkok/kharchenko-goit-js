@@ -24,9 +24,9 @@
 // if(isNaN(ordered)){
 //     alert('Будь ласка, введіть числове значення');
 // }
-// // else if(ordered===null||Number(ordered)===0){
-// //     alert('Ви не обрали жодної одиниці товару');
-// // }
+// else if(ordered===null||Number(ordered)===0){
+//     alert('Ви не обрали жодної одиниці товару');
+// }
 
 // else if(total>=ordered){
 //     alert("Замовлення оформлено, з Вами зв'яжеться менеджер!");
@@ -101,23 +101,23 @@
 //         break;
 // }
 // ================================================================home-task-6==================================
-let input;
-let total = 0;
+// let input;
+// let total = 0;
 // ==============================================while========================
-while (true) {
-        input = prompt('Введіть,будь ласка, число');
-        if (isNaN(input)) {
-            alert('Введіть, будь ласка,число'); 
-        } else if (input === null) {
-            total += Number(input);
-            alert(`Загальна сума чисел дорівнює ${total}`); 
-            break;
-        } else {
-            total += Number(input);
-            alert(`Загальна сума чисел дорівнює ${total}`); 
+// while (true) {
+//         input = prompt('Введіть,будь ласка, число');
+//         if (isNaN(input)) {
+//             alert('Введіть, будь ласка,число'); 
+//         } else if (input === null) {
+//             total += Number(input);
+//             alert(`Загальна сума чисел дорівнює ${total}`); 
+//             break;
+//         } else {
+//             total += Number(input);
+//             alert(`Загальна сума чисел дорівнює ${total}`); 
                 
-        }
-    } 
+//         }
+//     } 
 // =============================do-while====================================
 // do {
 //     input = prompt('Введіть,будь ласка, число');
