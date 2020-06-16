@@ -24,9 +24,10 @@
 // if(isNaN(ordered)){
 //     alert('Будь ласка, введіть числове значення');
 // }
-// else if(ordered===null||Number(ordered)===0){
-//     alert('Ви не обрали жодної одиниці товару');
-// }
+// // else if(ordered===null||Number(ordered)===0){
+// //     alert('Ви не обрали жодної одиниці товару');
+// // }
+
 // else if(total>=ordered){
 //     alert("Замовлення оформлено, з Вами зв'яжеться менеджер!");
 // }
@@ -35,19 +36,17 @@
 // }
 
 //===================================================home-task-3=======================================
-const ADMIN_PASSWORD = 'jqueryismyjam';
-let message = prompt('Введіть, будь ласка, пароль');
-// let normalizeMessage = message.toLowerCase();
-if (message===null) {
-    alert('Скасовано користувачем!');
-}
-else if (message===ADMIN_PASSWORD) {
-    alert('Ласкаво просимо!');
-}
-else{
-    alert('Доступ заборонений, невірний пароль!');
-}
-// alert(message); 
+// const ADMIN_PASSWORD = 'jqueryismyjam';
+// let message = prompt('Введіть, будь ласка, пароль');
+// if (message===null) {
+//     alert('Скасовано користувачем!');
+// }
+// else if (message===ADMIN_PASSWORD) {
+//     alert('Ласкаво просимо!');
+// }
+// else{
+//     alert('Доступ заборонений, невірний пароль!');
+// }
 
 //======================================================home-task-4========================================
 // const credits=23580;
@@ -102,19 +101,33 @@ else{
 //         break;
 // }
 // ================================================================home-task-6==================================
-// let input;
-// let total = 0;
+let input;
+let total = 0;
 // ==============================================while========================
-// while (true) {
-//     input = prompt('Введіть,будь ласка, число');
-//     total += Number(input);
-//     if (input === null) {
-//         alert(`Загальна сума чисел дорівнює ${total}`); 
-//         break;
-//     } 
+while (true) {
+        input = prompt('Введіть,будь ласка, число');
+        if (isNaN(input)) {
+            alert('Введіть, будь ласка,число'); 
+        } else if (input === null) {
+            total += Number(input);
+            alert(`Загальна сума чисел дорівнює ${total}`); 
+            break;
+        } else {
+            total += Number(input);
+            alert(`Загальна сума чисел дорівнює ${total}`); 
+                
+        }
+    } 
 // =============================do-while====================================
 // do {
 //     input = prompt('Введіть,будь ласка, число');
-//     total += Number(input);
-//     alert(`Загальна сума введених чисел ${total}`);
+//     if (isNaN(input)) {
+//         alert('Введіть, будь ласка,число');
+        
+//     }else{
+//         total += Number(input);
+//         alert(`Загальна сума введених чисел ${total}`);
+
+//     };
+    
 // } while(input !==null)
