@@ -65,42 +65,66 @@
 // }
 
 //=======================================home-task-5=======================================
-let inputCity=prompt('Для оформлення доставки, будь ласка, вкажіть Вашу країну');
-let deliveryPrice
-switch (inputCity.toLowerCase()) {
-    case'китай':
-        deliveryPrice=100;
-        alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
-        break;
+// let inputCity=prompt('Для оформлення доставки, будь ласка, вкажіть Вашу країну');
+// let deliveryPrice
+// switch (inputCity.toLowerCase()) {
+//     case'китай':
+//         deliveryPrice=100;
+//         alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
+//         break;
 
-    case'чилі':
-        deliveryPrice=250;
-        alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
-        break;
+//     case'чилі':
+//         deliveryPrice=250;
+//         alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
+//         break;
 
-    case'австралія':
-        deliveryPrice=170;
-        alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
-        break;
+//     case'австралія':
+//         deliveryPrice=170;
+//         alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
+//         break;
 
-    case'індія':
-        deliveryPrice=80;
-        alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
-        break;
+//     case'індія':
+//         deliveryPrice=80;
+//         alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
+//         break;
 
-    case'ямайка':
-        deliveryPrice=120;
-        alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
-        break;
+//     case'ямайка':
+//         deliveryPrice=120;
+//         alert(`Доставка в ${inputCity} буде коштувати ${deliveryPrice} кредитів`);
+//         break;
 
-    default:
-        alert('У вашій країні доставка недоступна');
-        break;
-}
+//     case'':
+//         alert('Ви не ввели жодної країни');
+//         break;
+
+//     default:
+//         alert('У вашій країні доставка недоступна');
+//         break;
+// }
+// ======================================home-task-6==================================
+let input;
+let total = 0;
+
+// while (true) {
+//     input = prompt('Введіть,будь ласка, число');
+//     total += Number(input);
+//     if (input === null) {
+//         alert(`Загальна сума чисел дорівнює ${total}`); 
+//         break;
+//     } 
+
+//     }
+    // ======================================
+// for (let i= 0; input !==null; i += 1) {
+//     total +=i;
+    // =================================
 
 
 
 
 
-
-
+do {
+    input = prompt('Введіть,будь ласка, число');
+    total += Number(input);
+    alert(`Загальна сума введених чисел ${total}`);
+} while(input !==null)
