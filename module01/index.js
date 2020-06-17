@@ -67,9 +67,7 @@
 let inputCity=prompt('Для оформлення доставки, будь ласка, вкажіть Вашу країну');
 let deliveryPrice;
 console.log(isNaN(inputCity));
-// if (!isNaN(inputCity)){
-//     alert('Ви ввели цифри');
-// } 
+
 if(inputCity !==null){
     if (!isNaN(inputCity)){
         alert('Ви ввели цифри');
@@ -108,7 +106,7 @@ if(inputCity !==null){
             alert('У вашій країні доставка недоступна');  
         
     }
-}
+    }
 
 }else{
     alert('Відмова користувача');
