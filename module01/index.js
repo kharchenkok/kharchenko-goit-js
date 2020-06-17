@@ -66,8 +66,14 @@
 //=========================================================home-task-5=======================================
 let inputCity=prompt('Для оформлення доставки, будь ласка, вкажіть Вашу країну');
 let deliveryPrice;
-
+console.log(isNaN(inputCity));
+// if (!isNaN(inputCity)){
+//     alert('Ви ввели цифри');
+// } 
 if(inputCity !==null){
+    if (!isNaN(inputCity)){
+        alert('Ви ввели цифри');
+    } else{
     switch (inputCity.toLowerCase()) {
         case'китай':
             deliveryPrice=100;
@@ -101,7 +107,8 @@ if(inputCity !==null){
         default:
             alert('У вашій країні доставка недоступна');  
         
-    };
+    }
+}
 
 }else{
     alert('Відмова користувача');
