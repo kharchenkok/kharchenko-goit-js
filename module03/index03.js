@@ -45,19 +45,19 @@
 
 // ===================home-task-03=================================================
 // =======ex1==============================================
-const findBestEmployee = function(employees) {
+// const findBestEmployee = function(employees) {
     
-    let workResult= Object.values(employees);
-    // console.log(workResult)
-    let nameEmpl=Object.keys(employees);
-    // console.log(nameEmpl)
-    let bestResult=Math.max(...workResult);
-    let indexBestResult=workResult.indexOf(Math.max(...workResult))
-    console.log(indexBestResult)
-    let bestEmpl = nameEmpl[workResult.indexOf(Math.max(...workResult))]
-    return bestEmpl
+//     let workResult= Object.values(employees);
+//     // console.log(workResult)
+//     let nameEmpl=Object.keys(employees);
+//     // console.log(nameEmpl)
+//     let bestResult=Math.max(...workResult);
+//     // let indexBestResult=workResult.indexOf(Math.max(...workResult))
+//     // console.log(indexBestResult)
+//     let bestEmpl = nameEmpl[workResult.indexOf(Math.max(...workResult))]
+//     return bestEmpl
 
-};
+// };
 
 
 // ================ex2===============================
@@ -76,57 +76,71 @@ const findBestEmployee = function(employees) {
 //       };
   
 
-  console.log(
-    findBestEmployee({
-      ann: 29,
-      david: 35,
-      helen: 1,
-      lorence: 99,
-    }),
-  ); // lorence
+//   console.log(
+//     findBestEmployee({
+//       ann: 29,
+//       david: 35,
+//       helen: 1,
+//       lorence: 99,
+//     }),
+//   ); // lorence
   
-  console.log(
-    findBestEmployee({
-      poly: 12,
-      mango: 17,
-      ajax: 4,
-    }),
-  ); // mango
+//   console.log(
+//     findBestEmployee({
+//       poly: 12,
+//       mango: 17,
+//       ajax: 4,
+//     }),
+//   ); // mango
   
-  console.log(
-    findBestEmployee({
-      lux: 147,
-      david: 21,
-      kiwi: 19,
-      chelsy: 38,
-    }),
-  ); // lux
+//   console.log(
+//     findBestEmployee({
+//       lux: 147,
+//       david: 21,
+//       kiwi: 19,
+//       chelsy: 38,
+//     }),
+//   ); // lux
 
 // ==========================home-task04==================================
-// Напиши функцию countTotalSalary(employees) принимающую объект зарплат. Функция считает общую сумму запрплаты работников и возращает ее.
-// Каждое поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата".
 
+// ===================ex1=============================================
+const countTotalSalary = function(employees) {
+    let salaries=Object.values(employees)
+    // console.log(salaries)
+    let salaryTotal=0
+    for(let salary of salaries){
+        // console.log(salary)
+        salaryTotal+=salary
+    }
+    return salaryTotal
+};
+
+// ======================ex2============================================
 // const countTotalSalary = function(employees) {
-//   // твой код
+//     let salaryTotal=0
+//     for(let key in employees){
+    
+//         salaryTotal+=employees[key]
+//     }
+//     return salaryTotal
 // };
 
-// /*
-//  * Вызовы функции для проверки работоспособности твоей реализации.
-//  */
-// console.log(countTotalSalary({})); // 0
 
-// console.log(
-//   countTotalSalary({
-//     mango: 100,
-//     poly: 150,
-//     alfred: 80,
-//   }),
-// ); // 330
+console.log(countTotalSalary({})); // 0
 
-// console.log(
-//   countTotalSalary({
-//     kiwi: 200,
-//     lux: 50,
-//     chelsy: 150,
-//   }),
-// ); // 400
+console.log(
+  countTotalSalary({
+    mango: 100,
+    poly: 150,
+    alfred: 80,
+  }),
+); // 330
+
+console.log(
+  countTotalSalary({
+    kiwi: 200,
+    lux: 50,
+    chelsy: 150,
+  }),
+); // 400
