@@ -44,18 +44,23 @@
 
 
 // ===================home-task-03=================================================
-
+// =======ex1==============================================
 const findBestEmployee = function(employees) {
-    let bestResult =0;
-    for(let workResult of Object.values(employees)){
-        if(workResult>bestResult){
-            bestResult=workResult
-        }
-    }
-    return bestResult
-};
-console.log(employees)
+    
+    let workResult= Object.values(employees);
+    // console.log(workResult)
+    let nameEmpl=Object.keys(employees);
+    // console.log(nameEmpl)
+    let bestResult=Math.max(...workResult);
+    let indexBestResult=workResult.indexOf(Math.max(...workResult))
+    console.log(indexBestResult)
+    let bestEmpl = nameEmpl[workResult.indexOf(Math.max(...workResult))]
+    return bestEmpl
 
+};
+
+
+// ================ex2===============================
 
 // const findBestEmployee = function(employees) {
 //         let bestResult =0;
@@ -96,3 +101,32 @@ console.log(employees)
       chelsy: 38,
     }),
   ); // lux
+
+// ==========================home-task04==================================
+// Напиши функцию countTotalSalary(employees) принимающую объект зарплат. Функция считает общую сумму запрплаты работников и возращает ее.
+// Каждое поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата".
+
+// const countTotalSalary = function(employees) {
+//   // твой код
+// };
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(countTotalSalary({})); // 0
+
+// console.log(
+//   countTotalSalary({
+//     mango: 100,
+//     poly: 150,
+//     alfred: 80,
+//   }),
+// ); // 330
+
+// console.log(
+//   countTotalSalary({
+//     kiwi: 200,
+//     lux: 50,
+//     chelsy: 150,
+//   }),
+// ); // 400
