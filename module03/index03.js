@@ -105,16 +105,14 @@
 // ==========================home-task04==================================
 
 // ===================ex1=============================================
-const countTotalSalary = function(employees) {
-    let salaries=Object.values(employees)
-    // console.log(salaries)
-    let salaryTotal=0
-    for(let salary of salaries){
-        // console.log(salary)
-        salaryTotal+=salary
-    }
-    return salaryTotal
-};
+// const countTotalSalary = function(employees) {
+//     let salaries=Object.values(employees)
+//     let salaryTotal=0
+//     for(let salary of salaries){
+//         salaryTotal+=salary
+//     }
+//     return salaryTotal
+// };
 
 // ======================ex2============================================
 // const countTotalSalary = function(employees) {
@@ -127,20 +125,70 @@ const countTotalSalary = function(employees) {
 // };
 
 
-console.log(countTotalSalary({})); // 0
+// console.log(countTotalSalary({})); // 0
 
-console.log(
-  countTotalSalary({
-    mango: 100,
-    poly: 150,
-    alfred: 80,
-  }),
-); // 330
+// console.log(
+//   countTotalSalary({
+//     mango: 100,
+//     poly: 150,
+//     alfred: 80,
+//   }),
+// ); // 330
 
-console.log(
-  countTotalSalary({
-    kiwi: 200,
-    lux: 50,
-    chelsy: 150,
-  }),
-); // 400
+// console.log(
+//   countTotalSalary({
+//     kiwi: 200,
+//     lux: 50,
+//     chelsy: 150,
+//   }),
+// ); // 400
+
+// =========================================home-task-05=======================================
+const products = [
+    { name: 'Радар', price: 1300, quantity: 4 },
+    { name: 'Сканер', price: 2700, quantity: 3 },
+    { name: 'Дроид', price: 400, quantity: 7 },
+    { name: 'Захват', price: 1200, quantity: 2 },
+  ];
+    
+
+// ===========ex1==================================================
+
+//   const getAllPropValues = function(arr, prop) {
+//       let propArray=[]
+//       for (let element of arr){
+//         //   console.log(element)
+//           if(prop in element){
+//               propArray.push(element[prop])
+//             }
+//         }
+//         return propArray
+    
+//   };
+  
+// ===========ex2==================================================
+const getAllPropValues = function(arr, prop) {
+          let propArray=[]
+          for (let i=0; i<arr.length; i+=1){
+            //   console.log(arr[i])
+              if(arr[i][prop]){
+                  propArray.push(arr[i][prop])
+
+                //   propArray.push(element[prop])
+                }
+            }
+            return propArray
+        
+      };
+
+
+
+
+
+
+
+  console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
+  
+  console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+  
+  console.log(getAllPropValues(products, 'category')); // []
