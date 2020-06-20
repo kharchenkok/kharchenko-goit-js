@@ -144,12 +144,12 @@
 // ); // 400
 
 // =========================================home-task-05=======================================
-const products = [
-    { name: 'Радар', price: 1300, quantity: 4 },
-    { name: 'Сканер', price: 2700, quantity: 3 },
-    { name: 'Дроид', price: 400, quantity: 7 },
-    { name: 'Захват', price: 1200, quantity: 2 },
-  ];
+// const products = [
+//     { name: 'Радар', price: 1300, quantity: 4 },
+//     { name: 'Сканер', price: 2700, quantity: 3 },
+//     { name: 'Дроид', price: 400, quantity: 7 },
+//     { name: 'Захват', price: 1200, quantity: 2 },
+//   ];
     
 
 // ===========ex1==================================================
@@ -167,28 +167,65 @@ const products = [
 //   };
   
 // ===========ex2==================================================
-const getAllPropValues = function(arr, prop) {
-          let propArray=[]
-          for (let i=0; i<arr.length; i+=1){
-            //   console.log(arr[i])
-              if(arr[i][prop]){
-                  propArray.push(arr[i][prop])
-
-                //   propArray.push(element[prop])
-                }
-            }
-            return propArray
+// const getAllPropValues = function(arr, prop) {
+//           let propArray=[]
+//           for (let i=0; i<arr.length; i+=1){
+//             //   console.log(arr[i])
+//               if(arr[i][prop]){
+//                 propArray.push(arr[i][prop])                
+//                 }
+//             }
+//             return propArray
         
-      };
+//       };
 
 
-
-
-
-
-
-  console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
+//   console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
   
-  console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+//   console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
   
-  console.log(getAllPropValues(products, 'category')); // []
+//   console.log(getAllPropValues(products, 'category')); // []
+
+// ======================home-task-06=====================================================================
+// Напиши функцию calculateTotalPrice(allProdcuts, productName), которая получает массив объектов и имя продукта (значение свойства name). Возвращает общую стоимость продукта (цена * количество).
+
+
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроид', price: 400, quantity: 7 },
+  { name: 'Захват', price: 1200, quantity: 2 },
+];
+
+// =================ex1=====================================================
+
+// const calculateTotalPrice = function(allProducts, productName) {
+//     let totalPrice
+//     for(let element of allProducts){
+//         // console.log(element)
+//         for(let key in element){
+//             // console.log(key)
+//             if (element[key] === productName){
+//                 // console.log(productName)
+//                 totalPrice=element.price*element.quantity
+//             }
+//         }  
+//     }
+//       return totalPrice
+//     };
+// ====================ex2====================================================
+const calculateTotalPrice = function(allProducts, productName) {
+    let totalPrice
+    for(let i=0; i<allProducts.length; i+=1){
+            if (allProducts[i]['name'] === productName){
+                // console.log(productName)
+                totalPrice=allProducts[i]['price']*allProducts[i]['quantity']
+            }
+        }  
+    
+      return totalPrice
+    };
+
+console.log(calculateTotalPrice(products, 'Радар')); // 5200
+
+console.log(calculateTotalPrice(products, 'Дроид')); // 2800
