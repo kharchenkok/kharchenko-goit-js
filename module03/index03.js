@@ -214,18 +214,18 @@ const products = [
 //       return totalPrice
 //     };
 // ====================ex2====================================================
-const calculateTotalPrice = function(allProducts, productName) {
-    let totalPrice
-    for(let i=0; i<allProducts.length; i+=1){
-            if (allProducts[i]['name'] === productName){
-                // console.log(productName)
-                totalPrice=allProducts[i]['price']*allProducts[i]['quantity']
-            }
-        }  
+// const calculateTotalPrice = function(allProducts, productName) {
+//     let totalPrice
+//     for(let i=0; i<allProducts.length; i+=1){
+//             if (allProducts[i]['name'] === productName){
+            
+//                 totalPrice=allProducts[i]['price']*allProducts[i]['quantity']
+//             }
+//         }  
     
-      return totalPrice
-    };
+//       return totalPrice
+//     };
 
-console.log(calculateTotalPrice(products, 'Радар')); // 5200
+// console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
-console.log(calculateTotalPrice(products, 'Дроид')); // 2800
+// console.log(calculateTotalPrice(products, 'Дроид')); // 2800
