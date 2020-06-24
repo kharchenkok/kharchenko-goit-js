@@ -30,35 +30,124 @@
 // ============================home-task-02=====================
 // Исправь ошибки которые будут в консоли, чтобы скрипт заработал.
 
-const inventory = {
-  items: ['Knife', 'Gas mask'],
+// ============ex-1===============================================
 
-  add(itemName) {
-    console.log(`Adding ${itemName} to inventory`);
+// const inventory = {
+//   items: ['Knife', 'Gas mask'],
 
-    this.items.push(itemName);
-  },
+//   add(itemName) {
+//     console.log(`Adding ${itemName} to inventory`);
 
-  remove(itemName) {
-    console.log(`Removing ${itemName} from inventory`);
+//     this.items.push(itemName);
+//   },
 
-    this.items = this.items.filter(item => item !== itemName);
-  },
-};
+//   remove(itemName) {
+//     console.log(`Removing ${itemName} from inventory`);
 
-const invokeInventoryAction = function(itemName, action) {
-  console.log(`Invoking action on ${itemName}`);
-  action(itemName);
-};
+//     this.items = this.items.filter(item => item !== itemName);
+//   },
+// };
 
-invokeInventoryAction('Medkit', inventory.add.bind(inventory));
-// Invoking action on Medkit
-// Adding Medkit to inventory
+// const invokeInventoryAction = function(itemName, action) {
+//   console.log(`Invoking action on ${itemName}`);
+//   action(itemName);
+// };
 
-console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
+// invokeInventoryAction('Medkit', inventory.add.bind(inventory));
+// // Invoking action on Medkit
+// // Adding Medkit to inventory
 
-invokeInventoryAction('Gas mask', inventory.remove.bind(inventory));
-// Invoking action on Gas mask
-// Removing Gas mask from inventory
+// console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
 
-console.log(inventory.items); // ['Knife', 'Medkit']
+// invokeInventoryAction('Gas mask', inventory.remove.bind(inventory));
+// // Invoking action on Gas mask
+// // Removing Gas mask from inventory
+
+// console.log(inventory.items); // ['Knife', 'Medkit']
+
+// ================ex2================================================
+    const inventory = {
+      items: ['Knife', 'Gas mask'],
+    
+      add(itemName) {
+        console.log(`Adding ${itemName} to inventory`);
+    
+        this.items.push(itemName);
+      },
+    
+      remove(itemName) {
+        console.log(`Removing ${itemName} from inventory`);
+    
+        this.items = this.items.filter(item => item !== itemName);
+      },
+    };
+    
+    const invokeInventoryAction = function(itemName, action) {
+      console.log(`Invoking action on ${itemName}`);
+      action(itemName);
+    };
+
+    const newAdd=inventory.add.bind(inventory);                                                                                                               
+    const newRemove=inventory.remove.bind(inventory);
+    
+    invokeInventoryAction('Medkit', newAdd);
+    // invokeInventoryAction('Medkit', inventory.add);
+    // Invoking action on Medkit
+    // Adding Medkit to inventory
+    
+    console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
+    
+    invokeInventoryAction('Gas mask', newRemove);
+    // invokeInventoryAction('Gas mask', inventory.remove);
+    // Invoking action on Gas mask
+    // Removing Gas mask from inventory
+    
+    console.log(inventory.items); // ['Knife', 'Medkit']
+    
+
+
+
+// const inventory = {
+//     items: ['Knife', 'Gas mask'],
+    
+//     invokeInventoryAction(itemName, action) {
+//         console.log(`Invoking action on ${itemName}`);
+//         action(itemName);
+//     },
+
+//     add(itemName) {
+//       console.log(`Adding ${itemName} to inventory`);
+  
+//       this.items.push(itemName);
+//     },
+  
+//     remove(itemName) {
+//       console.log(`Removing ${itemName} from inventory`);
+  
+//       this.items = this.items.filter(item => item !== itemName);
+//     },
+
+// };
+  
+// // const invokeInventoryAction = function(itemName, action) {
+// //     console.log(`Invoking action on ${itemName}`);
+// //     action(itemName);
+// //   };
+
+// // inventory.invokeInventoryAction=invokeInventoryAction;
+// //   console.log(inventory);
+  
+  
+// inventory.invokeInventoryAction('Medkit', inventory.add );
+// console.log(this);
+
+// // Invoking action on Medkit
+// // Adding Medkit to inventory
+  
+// console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
+  
+// inventory.invokeInventoryAction('Gas mask', inventory.remove);
+//   // Invoking action on Gas mask
+//   // Removing Gas mask from inventory
+  
+//   console.log(inventory.items); // ['Knife', 'Medkit']
