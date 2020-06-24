@@ -70,56 +70,92 @@
 // poly.getInfo(); // User Poly is 3 years old and has 17 followers
 
 // ==================================home-task-03=========================================
-// Напиши класс Storage, который будет создавать объекты для управления складом товаров. 
-// При вызове будет получать один аргумент - начальный массив товаров, и записывать его в свойство items.
+// // Напиши класс Storage, который будет создавать объекты для управления складом товаров. 
+// // При вызове будет получать один аргумент - начальный массив товаров, и записывать его в свойство items.
 
-// Добавь методы класса:
+// // Добавь методы класса:
 
-// getItems() - возвращает массив текущих товаров
-// addItem(item) - получает новый товар и добавляет его к текущим
-// removeItem(item) - получет товар и, если он есть, удаляет его из текущих
-class Storage{
-    constructor(arrayProd){
-        this.items=arrayProd
-    }
-    getItems(){
-        return this.items
+// // getItems() - возвращает массив текущих товаров
+// // addItem(item) - получает новый товар и добавляет его к текущим
+// // removeItem(item) - получет товар и, если он есть, удаляет его из текущих
+// class Storage{
+//     constructor(arrayProd){
+//         this.items=arrayProd
+//     }
+//     getItems(){
+//         return this.items
 
-    }
-    addItem(item){
-        return this.items.push(item)
-    }
-    removeItem(item){
+//     }
+//     addItem(item){
+//         return this.items.push(item)
+//     }
+//     removeItem(item){
 
-        if(this.items.includes(item)){
-            this.items.splice(this.items.indexOf(item),1)
-        }
-        
-        return this.items
-        
-    }
+//         if(this.items.includes(item)){
+//             this.items.splice(this.items.indexOf(item),1)
+//         }
+//         return this.items
+//     }
     
+// }
+
+// const storage = new Storage([
+//   'Нанитоиды',
+//   'Пролонгер',
+//   'Железные жупи',
+//   'Антигравитатор',
+// ]);
+// console.log(storage);
+// console.log(storage.items.indexOf('Пролонгер'));
+// const items = storage.getItems();
+// console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+
+// storage.addItem('Дроид');
+// console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+
+// storage.removeItem('Пролонгер');
+// console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+
+// ===================================home-task-4=====================================
+// Напиши класс StringBuilder. На вход он получает один параметр - строку, которую записывает в свойство _value.
+
+// Добавь классу следующий функционал:
+
+// Геттер value - возвращает текущее значение поля _value
+// Метод append(str) - получает парметр str (строку) и добавляет ее в конец _value
+// Метод prepend(str) - получает парметр str (строку) и добавляет ее в начало value
+// Метод pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец _value
+class StringBuilder{
+    constructor(string){
+        this._value=string
+    }
+    get value(){
+        return this._value
+    }
+    append(str){
+        
+        return this._value+=str
+    }
+    prepend(str){
+        return this._value=str+this._value
+    }
+    pad(str){
+        return this._value=str+this._value+str
+    }
 }
 
 
 
 
+const builder = new StringBuilder('.');
+console.log(builder)
 
+builder.append('^');
+console.log(builder.value); // '.^'
 
-const storage = new Storage([
-  'Нанитоиды',
-  'Пролонгер',
-  'Железные жупи',
-  'Антигравитатор',
-]);
-console.log(storage);
-console.log(storage.items.indexOf('Пролонгер'));
-const items = storage.getItems();
-console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+builder.prepend('^');
+console.log(builder.value); // '^.^'
 
-storage.addItem('Дроид');
-console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
-
-storage.removeItem('Пролонгер');
-console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+builder.pad('=');
+console.log(builder.value); // '=^.^='
 
