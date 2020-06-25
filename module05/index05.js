@@ -78,45 +78,45 @@
 // // getItems() - возвращает массив текущих товаров
 // // addItem(item) - получает новый товар и добавляет его к текущим
 // // removeItem(item) - получет товар и, если он есть, удаляет его из текущих
-class Storage{
-    constructor(arrayProd){
-        this.items=arrayProd
-    }
-    getItems(){
-        return this.items
+// class Storage{
+//     constructor(arrayProd){
+//         this.items=arrayProd
+//     }
+//     getItems(){
+//         return this.items
 
-    }
-    addItem(item){
-        return this.items.push(item)
-    }
-    removeItem(item){
+//     }
+//     addItem(item){
+//         return this.items.push(item)
+//     }
+//     removeItem(item){
 
-        // if(this.items.includes(item)){
-        //     this.items.splice(this.items.indexOf(item),1)
-        // }
-        // return this.items
-        this.items.includes(item) ? this.items.splice(this.items.indexOf(item),1) : null
+//         // if(this.items.includes(item)){
+//         //     this.items.splice(this.items.indexOf(item),1)
+//         // }
+//         // return this.items
+//         this.items.includes(item) ? this.items.splice(this.items.indexOf(item),1) : null
 
-    }
+//     }
     
-}
+// }
 
-const storage = new Storage([
-  'Нанитоиды',
-  'Пролонгер',
-  'Железные жупи',
-  'Антигравитатор',
-]);
-console.log(storage);
-console.log(storage.items.indexOf('Пролонгер'));
-const items = storage.getItems();
-console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+// const storage = new Storage([
+//   'Нанитоиды',
+//   'Пролонгер',
+//   'Железные жупи',
+//   'Антигравитатор',
+// ]);
+// console.log(storage);
+// console.log(storage.items.indexOf('Пролонгер'));
+// const items = storage.getItems();
+// console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
 
-storage.addItem('Дроид');
-console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+// storage.addItem('Дроид');
+// console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
 
-storage.removeItem('Пролонгер');
-console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+// storage.removeItem('Пролонгер');
+// console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
 
 // ===================================home-task-4=====================================
 // Напиши класс StringBuilder. На вход он получает один параметр - строку, которую записывает в свойство _value.
