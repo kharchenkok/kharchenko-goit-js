@@ -1,6 +1,7 @@
 import {default as users} from './users.js'
 
 console.table(users)
+//                                    
 
 // ============================================home-task-1==============================================
 // Получить массив имен всех пользователей (поле name).
@@ -81,53 +82,56 @@ console.table(users)
 // console.log(calculateTotalBalance(users)); // 20916
 
 
-// ============================================home-task-8==============================================
-// Массив имен всех пользователей у которых есть друг с указанным именем.
+// // ============================================home-task-8==============================================
+// // Массив имен всех пользователей у которых есть друг с указанным именем.
 
-const getUsersWithFriend = (users, friendName) => {
-  return users
-  .map(user=>user.friends.includes(friendName))
-};
-
-console.table(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
-
-
-
-
-
-
-
-
-
-// ============================================home-task-9==============================================
-// Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
-
-/* const newUsersArr =[...users] */
-/* console.log(newUsersArr); */
-/* console.log(newUsersArr[1].friends) */
-
-// const getNamesSortedByFriendsCount = users => {
+// const getUsersWithFriend = (users, friendName) => {
+//   return users
+//   .filter(user=>user.friends.includes(friendName))
+//   .map(user=>user.name)
   
 // };
 
-console.log(getNamesSortedByFriendsCount(users));
-// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+// console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+// console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 
 
 
 
+// // ============================================home-task-9==============================================
+// // Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 
 
+// const getNamesSortedByFriendsCount = users => {
+    
+// return users
+// .sort((a,b) => a.friends.length - b.friends.length)
+// .map(user=>user.name)
 
-
-// // ============================================home-task-10==============================================
-// // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
-
-// const getSortedUniqueSkills = users => {
-//   // твой код
 // };
 
-// console.log(getSortedUniqueSkills(users));
-// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+// console.log(getNamesSortedByFriendsCount(users));
+// // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree ]
+
+
+
+// ============================================home-task-10==============================================
+// Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
+
+
+const getSortedUniqueSkills = users => {
+    return users
+    .reduce((allSkills, user)=> {
+        user.skills.forEach((userSkill)=>
+        // if(allSkills.includes(userSkill))
+        allSkills.includes(userSkill) ? null : allSkills.push(userSkill))
+        
+    
+    return allSkills
+        
+    },[])
+    .sort()
+};
+
+console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
