@@ -9,7 +9,7 @@
 // Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
 
 const gallery=document.querySelector('#gallery')
-// const galleryImg = document.createElement("img");
+
 // const fragment = document.createDocumentFragment()
 
 const images = [
@@ -30,6 +30,7 @@ const images = [
   },
 ];
 
+// =========================================ex1==================================================
 
 const createImageCard = (image) => {
   const li = document.createElement("li");
@@ -45,3 +46,13 @@ console.log(imageCards);
 gallery.append(...imageCards);
 gallery.classList.add("gallery");
 console.dir(gallery)
+
+// ======================================ex2============================================================
+// let item = ''
+// images.forEach(image =>
+//   item +=`<li> <img class="gallery__img" src="${image.url}" alt="${image.alt}" /></li>`
+  
+// )
+
+// gallery.insertAdjacentHTML("afterbegin", item)
+// gallery.classList.add("gallery");
