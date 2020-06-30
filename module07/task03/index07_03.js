@@ -30,27 +30,9 @@ const images = [
   },
 ];
 
-// images.forEach(image => {
-//     // console.dir(image);
-//     const listItem=document.createElement('li')
-//     const newListItem= []
-//     // console.log(listItem);
-//     galleryImg.setAttribute("src", image.url);
-//     galleryImg.setAttribute("alt", image.alt);
-//     listItem.append(galleryImg);
 
-//     // console.log(listItem);
-//     fragment.append(listItem);
-// }
-// )
-
-// gallery.append(fragment)
-// console.log(gallery);
-
-// const gallery = document.querySelector("#gallery");
 const createImageCard = (image) => {
   const li = document.createElement("li");
-//   li.classList.add("image_card");
   const galleryImg = document.createElement("img");
   galleryImg.classList.add("gallery__img");
   galleryImg.setAttribute("src", image.url);
@@ -61,6 +43,5 @@ const createImageCard = (image) => {
 const imageCards = images.map((image) => createImageCard(image));
 console.log(imageCards);
 gallery.append(...imageCards);
-// gallery.style.display = "flex";
 gallery.classList.add("gallery");
 console.dir(gallery)
