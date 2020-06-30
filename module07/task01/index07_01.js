@@ -12,18 +12,17 @@
 // Категория: Животные
 // Количество элементов: 4
 
-const itemList = document.querySelector('#categories')
-// console.log(itemList);
-// console.dir(itemList.querySelectorAll('.item'));
-// console.dir(itemList.querySelectorAll('h2'));
-// console.dir(itemList.children);
+// const itemList = document.querySelector('#categories')
+// // console.log(itemList);
+// // console.dir(itemList.querySelectorAll('.item'));
+// // console.dir(itemList.querySelectorAll('h2'));
+// // console.dir(itemList.children);
 
-console.log(`В списке ${itemList.children.length} категории`);
+// console.log(`В списке ${itemList.children.length} категории`);
 
-// ===================ex1==============================================
-const itemArr=document.querySelectorAll('.item')
+// const itemArr=document.querySelectorAll('.item')
 // // console.log(itemArr);
-
+// // ===================ex1==============================================
 
 // for(let i=0; i<itemArr.length; i+=1){
 //         const category = itemArr[i].children[0].textContent;
@@ -32,14 +31,16 @@ const itemArr=document.querySelectorAll('.item')
 //         console.log(`Количество элементов: ${categoryList}`);
         
 //     }
-for(let i=0; i<itemArr.length; i+=1){
-            const category = itemArr[i].querySelector('h2').textContent;
-            console.log(`Категория: ${category}`);
-            const categoryList = itemArr[i].querySelector('ul').children.length;
-            console.log(`Количество элементов: ${categoryList}`);
+
+// // =======================ex2================================================
+// for(let i=0; i<itemArr.length; i+=1){
+//             const category = itemArr[i].querySelector('h2').textContent;
+//             console.log(`Категория: ${category}`);
+//             const categoryList = itemArr[i].querySelector('ul').children.length;
+//             console.log(`Количество элементов: ${categoryList}`);
             
-        }
-// ===================ex2================================================
+//         }
+// // ===================ex3================================================
 // itemArr.forEach(element => {
     
 //     console.log(`Категория:${element.querySelector('h2').textContent}`);
