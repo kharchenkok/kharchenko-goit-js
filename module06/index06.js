@@ -119,19 +119,19 @@ console.table(users)
 // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
 
-const getSortedUniqueSkills = users => {
-    return users
-    .reduce((allSkills, user)=> {
-        user.skills.forEach((userSkill)=>
-        // if(allSkills.includes(userSkill))
-        allSkills.includes(userSkill) ? null : allSkills.push(userSkill))
+// const getSortedUniqueSkills = users => {
+//     return users
+//     .reduce((allSkills, user)=> {
+//         user.skills.forEach((userSkill)=> 
+//         // if(allSkills.includes(userSkill))
+//         allSkills.includes(userSkill) ? null : allSkills.push(userSkill))
         
     
-    return allSkills
+//     return allSkills
         
-    },[])
-    .sort()
-};
+//     },[])
+//     .sort()
+// };
 
-console.log(getSortedUniqueSkills(users));
+// console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
