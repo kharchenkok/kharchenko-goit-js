@@ -12,7 +12,7 @@
 // Категория: Животные
 // Количество элементов: 4
 
-const itemList = document.querySelector('#categories')
+// const itemList = document.querySelector('#categories')
 // // console.log(itemList);
 // // console.dir(itemList.querySelectorAll('.item'));
 // // console.dir(itemList.querySelectorAll('h2'));
@@ -20,7 +20,7 @@ const itemList = document.querySelector('#categories')
 
 // console.log(`В списке ${itemList.children.length} категории`);
 
-const itemArr=itemList.querySelectorAll('.item')
+// const itemArr=itemList.querySelectorAll('.item')
 // // console.log(itemArr);
 // // ===================ex1==============================================
 
@@ -33,13 +33,13 @@ const itemArr=itemList.querySelectorAll('.item')
 //     }
 
 // // =======================ex2================================================
-for(let i=0; i<itemArr.length; i+=1){
-            const category = itemArr[i].querySelector('h2').textContent;
-            console.log(`Категория: ${category}`);
-            const categoryList = itemArr[i].querySelector('ul').children.length;
-            console.log(`Количество элементов: ${categoryList}`);
+// for(let i=0; i<itemArr.length; i+=1){
+//             const category = itemArr[i].querySelector('h2').textContent;
+//             console.log(`Категория: ${category}`);
+//             const categoryList = itemArr[i].querySelector('ul').children.length;
+//             console.log(`Количество элементов: ${categoryList}`);
             
-        }
+//         }
 // // ===================ex3================================================
 // itemArr.forEach(element => {
     
