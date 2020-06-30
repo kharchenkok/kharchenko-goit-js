@@ -12,10 +12,7 @@ const ingredients = [
   'Помидоры',
   'Зелень',
   'Приправы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',
+  
 ];
 const fragment = document.createDocumentFragment()
 // Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, 
