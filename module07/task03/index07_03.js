@@ -32,27 +32,27 @@ const images = [
 
 // =========================================ex1==================================================
 
-const createImageCard = (image) => {
-  const li = document.createElement("li");
-  const galleryImg = document.createElement("img");
-  galleryImg.classList.add("gallery__img");
-  galleryImg.setAttribute("src", image.url);
-  galleryImg.setAttribute("alt", image.alt);
-  li.append(galleryImg);
-  return li;
-};
-const imageCards = images.map((image) => createImageCard(image));
-console.log(imageCards);
-gallery.append(...imageCards);
-gallery.classList.add("gallery");
-console.dir(gallery)
+// const createImageCard = (image) => {
+//   const li = document.createElement("li");
+//   const galleryImg = document.createElement("img");
+//   galleryImg.classList.add("gallery__img");
+//   galleryImg.setAttribute("src", image.url);
+//   galleryImg.setAttribute("alt", image.alt);
+//   li.append(galleryImg);
+//   return li;
+// };
+// const imageCards = images.map((image) => createImageCard(image));
+// console.log(imageCards);
+// gallery.append(...imageCards);
+// gallery.classList.add("gallery");
+// console.dir(gallery)
 
 // ======================================ex2============================================================
-// let item = ''
-// images.forEach(image =>
-//   item +=`<li> <img class="gallery__img" src="${image.url}" alt="${image.alt}" /></li>`
+let marcup = ''
+images.forEach(image =>
+  marcup +=`<li> <img class="gallery__img" src="${image.url}" alt="${image.alt}" /></li>`
   
-// )
+)
 
-// gallery.insertAdjacentHTML("afterbegin", item)
-// gallery.classList.add("gallery");
+gallery.insertAdjacentHTML("afterbegin", marcup)
+gallery.classList.add("gallery");
