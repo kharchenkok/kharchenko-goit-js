@@ -29,7 +29,7 @@ galleryItems.forEach(item =>
 gallery.insertAdjacentHTML('afterbegin',marcup)
 console.dir(gallery);
 console.log(gallery);
-console.dir(gallery.children)
+
 
 
 function modalBoxOpen(e) {
@@ -40,6 +40,10 @@ function modalBoxOpen(e) {
     modalBox.classList.add('is-open')
     modalImage.src = e.target.dataset.source;
     modalImage.alt = e.target.alt;
+    console.log(modalImage);
+    console.dir(modalImage);
+    console.dir(modalImage.src);
+    
 
     modalBox.addEventListener('click', modalClose)
     document.addEventListener('keydown', modalClose)
