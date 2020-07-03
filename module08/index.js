@@ -85,9 +85,6 @@ function flipImages (e){
       
       break;
     
-      
-
-
   
     default:
       break;
