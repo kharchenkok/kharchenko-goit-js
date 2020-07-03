@@ -25,8 +25,6 @@ galleryItems.forEach(item =>
       `
 )
 gallery.insertAdjacentHTML('afterbegin',marcup)
-// console.dir(gallery);
-// console.log(gallery);
 
 function modalBoxOpen(e) {
     e.preventDefault();
@@ -45,15 +43,28 @@ function modalBoxOpen(e) {
   
   function flipImages (e){
     modalImageCurrent = modalImage.getAttribute('src')
-    let modalImageCurrentInd = galleryItems.findIndex(element => element.original === modalImageCurrent);
-    console.log(modalImageCurrentInd);
+    let modalImageCurrentIndex = galleryItems.findIndex(element => element.original === modalImageCurrent);
+    
     if (e.key === 'ArrowRight'){
-      console.log(e);
+      let newImageCurrentIndex = modalImageCurrentIndex +1
       
-      let newModalImage = modalImage.setAttribute('src', galleryItems[modalImageCurrentInd +1].original)
+      if ( newImageCurrentIndex >= galleryItems.length){
+            newImageCurrentIndex = 0;
+      }
+                  
+      let newModalImage = modalImage.setAttribute('src', galleryItems[newImageCurrentIndex].original)
     }
+
+    
+    
     if (e.key === 'ArrowLeft'){
-      let newModalImage = modalImage.setAttribute('src', galleryItems[modalImageCurrentInd -1].original)
+      let newImageCurrentIndex = modalImageCurrentIndex -1;
+      if ( newImageCurrentIndex < 0 ){
+        newImageCurrentIndex = galleryItems.length-1 ;
+      }
+
+      let newModalImage = modalImage.setAttribute('src', galleryItems[newImageCurrentIndex].original)
+      
     }
   
   }
