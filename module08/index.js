@@ -7,6 +7,7 @@ const modalBox = document.querySelector('.js-lightbox')
 const modalOverlay = document.querySelector('.lightbox__overlay')
 const modalImage = document.querySelector('.lightbox__image')
 const modalCloseBtn = document.querySelector('.lightbox__button')
+let modalImageTarget
 
 let marcup = ''
 galleryItems.forEach(item =>
@@ -39,17 +40,60 @@ function modalBoxOpen(e) {
     }
     modalBox.classList.add('is-open')
     modalImage.src = e.target.dataset.source;
+    
     modalImage.alt = e.target.alt;
     console.log(modalImage);
     console.dir(modalImage);
     console.dir(modalImage.src);
     
+    modalImageTarget=e.target
 
     modalBox.addEventListener('click', modalClose)
     document.addEventListener('keydown', modalClose)
-    // document.addEventListener('keydown', flipImages)
+  
+    document.addEventListener('keydown', flipImages)
 }
 
+function nextElement () {
+  const element = galleryItems.find((item)=>{
+    modalImageTarget.dataset.source === item.original
+    console.log(modalImageTarget.dataset.source);
+    console.log(item.original);
+    
+    
+  }
+  )
+  console.log(galleryItems.indexOf(element))
+
+  
+}
+
+
+
+
+
+function flipImages (e){
+  console.log(e.key);
+  nextElement()
+
+  switch (e.key) {
+    case 'ArrowRight':
+      // modalImage.src = nextElement()
+      nextElement()
+      break;
+    case 'ArrowLeft':
+      
+      break;
+    
+      
+
+
+  
+    default:
+      break;
+  }
+  
+}
 function modalClose(e) {
     
     if( (e.target === modalOverlay) || e.target.dataset.action === 'close-lightbox'|| e.key === "Escape"){    
@@ -61,11 +105,8 @@ function modalClose(e) {
 }
 
 
-const imgArr = [...gallery.querySelectorAll('.gallery__image')]
-console.dir(imgArr);
-
-
-
+// const imgArr = [...gallery.querySelectorAll('.gallery__image')]
+// console.dir(imgArr);
 
 
 gallery.addEventListener('click', modalBoxOpen )
