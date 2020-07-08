@@ -5,8 +5,16 @@ import './js/themeChange';
 
 // console.log(menuItems);
 // console.log(menuItemsTemplate(menuItems));
+const menu =document.querySelector('.js-menu')
 
 let markup = menuItemsTemplate(menuItems);
-const menu = document.querySelector('.js-menu').insertAdjacentHTML('afterbegin', markup);
+// console.log(markup);
+
+menu.insertAdjacentHTML('afterbegin', markup);
+console.log(menu);
+
+
+
+
 
 
