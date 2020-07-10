@@ -21,7 +21,7 @@ function themeChange (e){
         refs.body.classList.add(Theme.LIGHT);
         refs.body.classList.remove(Theme.DARK);
         localStorage.setItem('userTheme', Theme.LIGHT)
-        // localStorage.removeItem('userTheme');
+        localStorage.removeItem('userTheme');
         console.log(localStorage.userTheme);
     }
 }

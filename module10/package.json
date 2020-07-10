@@ -1,5 +1,5 @@
 {
-  "name": "webpack-starter-kit",
+  "name": "module_10",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxplanjay/webpack-starter-kit.git"
+    "url": "git+https://github.com/kharchenkok/kharchenko-goit-js/tree/master/module10"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "kharchenkok <k.v.kharchenko@ukr.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
+    "url": "https://github.com/kharchenkok/kharchenko-goit-js/tree/master/module10/issues"
   },
   "homepage": "https://kharchenkok.github.io/kharchenko-goit-js/module10",
   "devDependencies": {

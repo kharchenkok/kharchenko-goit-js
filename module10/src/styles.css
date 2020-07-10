@@ -230,3 +230,38 @@ body.dark-theme {
 .button__icon {
   margin-right: 8px;
 }
+
+/* PAGINATION */
+.productPagination {
+  margin-top: 5px;
+  border: 1px double black;
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap ;
+  margin: 5px;
+  background-color: cornflowerblue;
+  
+
+}
+.productPagination{
+  background-color:white;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.paginationPageItem{
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+
+}
+
+.activePaginationPageItem{
+  background-color: cornflowerblue;
+  color: black;
+}
