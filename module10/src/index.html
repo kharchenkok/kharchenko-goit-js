@@ -12,9 +12,16 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+<!-- ======модальное окно====== -->
+      <template id="modal">
+        <div class="modal">
+          <button class="modalBtn">Закрыть корзину</button>
+        </div>
+      </template>
+
     <div class="toolbar">
-      <button class="toolbar__button">
-        <i class="material-icons button__icon">shopping_cart</i>
+      <button class="toolbar__cart-button">
+        <i class="material-icons modal-button__icon">shopping_cart</i>
       </button>
       <!-- Разметка переключателя темы -->
       <div class="theme-switch">

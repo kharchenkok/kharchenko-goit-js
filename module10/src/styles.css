@@ -34,6 +34,21 @@ body.dark-theme {
   padding: 16px 24px;
 }
 
+/* MODAL STYLE */
+.modal{
+  color: #000000;
+  padding: 1.8rem 2.16rem 0.9rem;
+  width: 550px;
+  max-width: 1300px;
+  background: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.modal-button__icon {
+  margin:0 auto;
+}
+
 /* THEME SWITCH */
 .theme-switch {
   display: flex;
@@ -221,7 +236,7 @@ body.dark-theme {
   user-select: none;
   transition: background-color 200ms ease-in-out;
 }
-.toolbar__button {
+.toolbar__cart-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
