@@ -10,30 +10,45 @@ export const cart = {
 
 };
 export const addToCart=(menuItem) =>{
-    cart.order =[...cart.order, 
-        {
-        id:menuItem.id,
-        name:menuItem.name,
-        price:menuItem.price,
-        quantity:1,
-    }];
-    getTotal();
-    console.log(cart.order);
-    
- }
+    const result = cart.order.find(item => item.name === menuItem.name)
+    if(!result){
+        cart.order =[...cart.order, 
+            {
+            id:menuItem.id,
+            name:menuItem.name,
+            price:menuItem.price,
+            quantity:1,
+        }];
+        getTotal();
+        console.log(cart.order);
 
- const removeFromCart = (id) =>{
-    cart.order = cart.order.filter(menuItem => menuItem.id !==id);
+    }else{
+        cart.order=cart.order.map(item => {
+             if (item.name===menuItem.name){
+                 return {
+                     ...item, 
+                     quantity:(item.quantity+1)
+                 }
+             }else{
+                 return item
+             }
+        })
+    }
     getTotal()
  }
 
-const getTotal = () =>{
+ export const removeFromCart = (id) =>{
+    cart.order = cart.order.filter(menuItem => menuItem.id !==id);
+    // getTotal()
+ }
+
+export const getTotal = () =>{
     cart.totalQuantity = cart.order.reduce((acc,menuItem) =>{
         acc += menuItem.quantity;
         return acc
     },0)
     cart.totalPrice = cart.order.reduce((acc,menuItem) =>{
-        acc += menuItem.price;
+        acc += menuItem.price*menuItem.quantity;
         return acc
     },0)
 };

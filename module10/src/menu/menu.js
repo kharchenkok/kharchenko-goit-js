@@ -22,7 +22,5 @@ if(e.target.nodeName ==='BUTTON' && e.target.dataset.btn ==='cartBtn'){
 }else return;
 }
 
-
-
 refs.menu.insertAdjacentHTML('afterbegin', markup);
 refs.menu.addEventListener('click', addToOrder);

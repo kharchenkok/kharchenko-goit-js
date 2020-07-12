@@ -1,0 +1,11 @@
+{{#each this}}
+<li class="cart__item">
+    <span class="cart__list-item">{{name}}</span>
+    <div class="cart__item-block">
+        <span class="cart__order-quantity">{{quantity}} шт.</span>
+        <span class="cart__order-price">по {{price}} кредитов</span>
+        <button class = "cart__order-remove" data-id ="{{id}}">Удалить</button>
+    </div>
+
+</li>
+{{/each}}
