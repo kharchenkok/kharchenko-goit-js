@@ -25,6 +25,8 @@ galleryItems.forEach(item =>
       `
 )
 gallery.insertAdjacentHTML('afterbegin',marcup)
+// console.log(gallery);
+
 
 function modalBoxOpen(e) {
     e.preventDefault();
